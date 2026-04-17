@@ -1,0 +1,474 @@
+/* ============================================================
+   GOLDLINES — Homepage Styles (home.css)
+   Page-specific styles only. Global styles in global.css
+   ============================================================ */
+
+/* ── HERO ─────────────────────────────────────────────────── */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  padding-top: var(--nav-h);
+  overflow: hidden;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space-xl) 60px var(--space-xl) 80px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-eyebrow {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--camel);
+  margin-bottom: var(--space-md);
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.2s forwards;
+}
+
+.hero-headline {
+  font-family: var(--font-serif);
+  font-size: clamp(40px, 5vw, 72px);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  color: var(--black);
+  margin-bottom: var(--space-md);
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.4s forwards;
+}
+
+.hero-headline em {
+  font-style: italic;
+  color: var(--burgundy);
+}
+
+.hero-sub {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.85;
+  color: var(--grey-text);
+  max-width: 380px;
+  margin-bottom: var(--space-lg);
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.6s forwards;
+}
+
+.hero-actions {
+  display: flex;
+  gap: var(--space-sm);
+  align-items: center;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.8s forwards;
+}
+
+.hero-image {
+  position: relative;
+  overflow: hidden;
+  background: var(--black);
+  opacity: 0;
+  animation: fadeIn 1.2s ease 0.3s forwards;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(255,255,255,0.12) 0%, transparent 30%);
+  pointer-events: none;
+}
+
+.hero-badge {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  background: var(--burgundy);
+  color: var(--white);
+  font-family: var(--font-sans);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  opacity: 0;
+  animation: fadeIn 0.8s ease 1.2s forwards;
+}
+
+/* ── PHILOSOPHY ───────────────────────────────────────────── */
+.philosophy {
+  padding: var(--space-2xl) 0;
+  background: var(--ivory);
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr 1px 1fr;
+  gap: 0;
+  align-items: start;
+}
+
+.philosophy-divider {
+  background: var(--grey-mid);
+  align-self: stretch;
+}
+
+.philosophy-item {
+  padding: 0 56px;
+}
+
+.philosophy-item:first-child { padding-left: 0; }
+.philosophy-item:last-child  { padding-right: 0; }
+
+.philosophy-num {
+  font-family: var(--font-serif);
+  font-size: 52px;
+  font-weight: 300;
+  color: var(--camel);
+  opacity: 0.35;
+  line-height: 1;
+  margin-bottom: var(--space-md);
+}
+
+.philosophy-title {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--black);
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.philosophy-body {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.95;
+  color: var(--grey-text);
+}
+
+/* ── FEATURED ─────────────────────────────────────────────── */
+.featured {
+  padding: var(--space-2xl) 0;
+  background: var(--white);
+}
+
+.featured-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 56px;
+  gap: var(--space-sm);
+}
+
+.featured-title {
+  font-family: var(--font-serif);
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.featured-title em {
+  font-style: italic;
+  color: var(--burgundy);
+}
+
+.featured-link {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--black);
+  border-bottom: 1px solid var(--black);
+  padding-bottom: 2px;
+  white-space: nowrap;
+  transition: color var(--transition), border-color var(--transition);
+  flex-shrink: 0;
+}
+
+.featured-link:hover {
+  color: var(--burgundy);
+  border-bottom-color: var(--burgundy);
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+/* ── BRAND STATEMENT ──────────────────────────────────────── */
+.statement {
+  background: var(--black);
+  padding: var(--space-2xl) 0;
+  text-align: center;
+  position: relative;
+}
+
+.statement::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 60px;
+  background: var(--camel);
+  opacity: 0.3;
+}
+
+.statement-eyebrow {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--camel);
+  margin-bottom: var(--space-lg);
+}
+
+.statement-text {
+  font-family: var(--font-serif);
+  font-size: clamp(26px, 4vw, 52px);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--white);
+  line-height: 1.35;
+  max-width: 860px;
+  margin: 0 auto var(--space-sm);
+  border: none;
+  padding: 0;
+}
+
+.statement-text strong {
+  font-style: normal;
+  font-weight: 500;
+  color: var(--camel);
+}
+
+.statement-sub {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: rgba(255,255,255,0.25);
+  text-transform: uppercase;
+  margin-top: var(--space-lg);
+}
+
+/* ── SPLIT ABOUT ──────────────────────────────────────────── */
+.split-about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 560px;
+}
+
+.split-about-image {
+  position: relative;
+  overflow: hidden;
+  background: var(--grey-light);
+}
+
+.split-about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.split-about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space-xl) var(--space-xl);
+  background: var(--ivory);
+}
+
+.split-headline {
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 3vw, 44px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: var(--space-md);
+}
+
+.split-headline em {
+  font-style: italic;
+  color: var(--burgundy);
+}
+
+.split-body {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.9;
+  color: var(--grey-text);
+  margin-bottom: var(--space-lg);
+}
+
+/* ── WAITLIST BANNER ──────────────────────────────────────── */
+.waitlist-banner {
+  background: var(--burgundy);
+  padding: var(--space-xl) 0;
+  text-align: center;
+}
+
+.waitlist-headline {
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 4vw, 52px);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--white);
+  margin-bottom: var(--space-sm);
+}
+
+.waitlist-sub {
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: var(--space-lg);
+}
+
+.waitlist-form {
+  display: flex;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.waitlist-input {
+  flex: 1;
+  padding: 16px 20px;
+  background: rgba(255,255,255,0.12);
+  border: 0.5px solid rgba(255,255,255,0.3);
+  border-right: none;
+  color: var(--white);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 300;
+  outline: none;
+  transition: background var(--transition);
+  min-width: 0;
+}
+
+.waitlist-input::placeholder { color: rgba(255,255,255,0.4); }
+.waitlist-input:focus { background: rgba(255,255,255,0.18); }
+
+.waitlist-btn {
+  background: var(--white);
+  color: var(--burgundy);
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 16px 28px;
+  border: 0.5px solid var(--white);
+  flex-shrink: 0;
+  transition: background var(--transition), color var(--transition), border-color var(--transition);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.waitlist-btn:hover {
+  background: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+}
+
+/* ── RESPONSIVE — HOMEPAGE ────────────────────────────────── */
+@media (max-width: 1024px) {
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-content { padding: var(--space-xl) var(--pad-x) var(--space-lg); }
+  .hero-image { height: 60vw; min-height: 320px; }
+  .hero-badge { bottom: 24px; right: 24px; }
+
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  .philosophy-divider { display: none; }
+  .philosophy-item { padding: 0; }
+
+  .products-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .split-about { grid-template-columns: 1fr; }
+  .split-about-image { height: 56vw; min-height: 280px; }
+  .split-about-content { padding: var(--space-xl) var(--pad-x); }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 60px var(--pad-x-md) var(--space-lg);
+    text-align: left;
+  }
+
+  .hero-sub { max-width: 100%; }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+
+  .hero-actions .btn-primary { width: 100%; justify-content: center; }
+
+  .philosophy { padding: var(--space-xl) 0; }
+
+  .featured { padding: var(--space-xl) 0; }
+
+  .featured-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .statement { padding: var(--space-xl) 0; }
+  .statement::before { height: 40px; }
+
+  .split-about-content {
+    padding: var(--space-lg) var(--pad-x-md);
+  }
+
+  .waitlist-banner { padding: var(--space-lg) 0; }
+
+  .waitlist-form {
+    flex-direction: column;
+    padding: 0 var(--pad-x-md);
+  }
+
+  .waitlist-input {
+    border-right: 0.5px solid rgba(255,255,255,0.3);
+    border-bottom: none;
+    font-size: 16px; /* prevents iOS zoom */
+  }
+
+  .waitlist-btn {
+    padding: 16px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-image { height: 70vw; }
+
+  .products-grid { gap: var(--space-md); }
+
+  .philosophy-num { font-size: 40px; }
+  .philosophy-title { font-size: 20px; }
+
+  .split-about-content { padding: var(--space-lg) var(--pad-x-sm); }
+
+  .waitlist-form { padding: 0 var(--pad-x-sm); }
+}

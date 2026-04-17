@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="GOLDLINES Shop — Structured two-piece sets designed for ambitious women. Pre-order the launch collection." />
+  <title>Shop — GOLDLINES</title>
+  <link rel="stylesheet" href="global.css" />
+  <link rel="stylesheet" href="shop.css" />
+</head>
+<body>
+
+  <!-- ── NAV ──────────────────────────────────────────────── -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">GOLDLINES</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="waitlist.html" class="nav-cta">Pre-order</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-drawer" id="nav-drawer">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="waitlist.html" class="nav-cta">Pre-order</a>
+  </div>
+
+  <!-- ── SHOP HERO ─────────────────────────────────────────── -->
+  <section class="shop-hero">
+    <div class="container">
+      <div class="shop-hero-inner">
+        <div class="shop-hero-text">
+          <p class="shop-hero-eyebrow">Launch Collection 2026</p>
+          <h1 class="shop-hero-title">Shop <em>Collection</em></h1>
+          <p class="shop-hero-sub">
+            Structured. Intentional. Built for the woman going somewhere. Join the waitlist to be first when we launch.
+          </p>
+        </div>
+        <div class="shop-hero-badge">
+          <div class="shop-hero-badge-inner">
+            <div class="shop-hero-badge-num">6</div>
+            <div class="shop-hero-badge-label">Pieces Available</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FILTER BAR ────────────────────────────────────────── -->
+  <div class="filter-bar" id="filter-bar">
+    <div class="filter-bar-inner">
+      <div class="filter-tabs" role="tablist" aria-label="Filter products">
+        <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="filter-tab" data-filter="sets" role="tab" aria-selected="false">Sets</button>
+        <button class="filter-tab" data-filter="dresses" role="tab" aria-selected="false">Dresses</button>
+        <button class="filter-tab" data-filter="new" role="tab" aria-selected="false">New</button>
+      </div>
+      <span class="filter-count" id="filter-count">Showing 6 pieces</span>
+    </div>
+  </div>
+
+  <!-- ── SHOP MAIN ─────────────────────────────────────────── -->
+  <main class="shop-main">
+    <div class="container">
+      <div class="shop-grid" id="shop-grid">
+
+        <!-- ── THE AUTHORITY SET ── -->
+        <article class="shop-product-card reveal" data-category="sets new">
+          <div class="shop-card-image">
+            <div class="shop-card-badge">New</div>
+            <!--
+              REPLACE: images/authority-set.jpg
+              Portrait 3:4, clean background preferred
+            -->
+            <img src="images/authority-set.jpg" alt="The Authority Set"
+              loading="lazy" onerror="this.style.display='none'" />
+            <div class="shop-card-overlay">
+              <a href="product-authority.html" class="shop-card-btn primary-btn">View Product</a>
+              <a href="waitlist.html" class="shop-card-btn">Join Waitlist →</a>
+            </div>
+          </div>
+          <div class="shop-card-info">
+            <div class="swatches shop-card-swatches">
+              <div class="swatch s-burgundy" title="Signature Burgundy"></div>
+              <div class="swatch s-ivory"    title="Ivory"></div>
+            </div>
+            <h2 class="shop-card-name">The Authority Set</h2>
+            <p class="shop-card-desc">She walks in and the room adjusts. Structured two-piece built for the woman who leads every space she enters.</p>
+            <div class="shop-card-footer">
+              <span class="shop-card-waitlist">Join the waitlist</span>
+              <a href="waitlist.html" class="shop-card-reserve">Reserve →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── THE FOCUS SET ── -->
+        <article class="shop-product-card reveal reveal-delay-1" data-category="sets">
+          <div class="shop-card-image">
+            <img src="images/focus-set.jpg" alt="The Focus Set"
+              loading="lazy" onerror="this.style.display='none'" />
+            <div class="shop-card-overlay">
+              <a href="product-focus.html" class="shop-card-btn primary-btn">View Product</a>
+              <a href="waitlist.html" class="shop-card-btn">Join Waitlist →</a>
+            </div>
+          </div>
+          <div class="shop-card-info">
+            <div class="swatches shop-card-swatches">
+              <div class="swatch s-burgundy" title="Signature Burgundy"></div>
+              <div class="swatch s-camel"    title="Warm Camel"></div>
+            </div>
+            <h2 class="shop-card-name">The Focus Set</h2>
+            <p class="shop-card-desc">Refined and precise. For the woman who moves with purpose and dresses with the same intentionality she brings to everything else.</p>
+            <div class="shop-card-footer">
+              <span class="shop-card-waitlist">Join the waitlist</span>
+              <a href="waitlist.html" class="shop-card-reserve">Reserve →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── THE IVY SET ── -->
+        <article class="shop-product-card reveal reveal-delay-2" data-category="sets dresses">
+          <div class="shop-card-image">
+            <img src="images/ivy-set.jpg" alt="The Ivy Set"
+              loading="lazy" onerror="this.style.display='none'" />
+            <div class="shop-card-overlay">
+              <a href="product-ivy.html" class="shop-card-btn primary-btn">View Product</a>
+              <a href="waitlist.html" class="shop-card-btn">Join Waitlist →</a>
+            </div>
+          </div>
+          <div class="shop-card-info">
+            <div class="swatches shop-card-swatches">
+              <div class="swatch s-burgundy" title="Signature Burgundy"></div>
+              <div class="swatch s-ivory"    title="Ivory"></div>
+            </div>
+            <h2 class="shop-card-name">The Ivy Set</h2>
+            <p class="shop-card-desc">Understated. Elegant. The kind of set that makes people ask where you got it without you having to say a word.</p>
+            <div class="shop-card-footer">
+              <span class="shop-card-waitlist">Join the waitlist</span>
+              <a href="waitlist.html" class="shop-card-reserve">Reserve →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── THE PRESENCE SET ── -->
+        <article class="shop-product-card reveal" data-category="sets new">
+          <div class="shop-card-image">
+            <div class="shop-card-badge">New</div>
+            <img src="images/presence-set.jpg" alt="The Presence Set"
+              loading="lazy" onerror="this.style.display='none'" />
+            <div class="shop-card-overlay">
+              <a href="product-presence.html" class="shop-card-btn primary-btn">View Product</a>
+              <a href="waitlist.html" class="shop-card-btn">Join Waitlist →</a>
+            </div>
+          </div>
+          <div class="shop-card-info">
+            <div class="swatches shop-card-swatches">
+              <div class="swatch s-burgundy" title="Signature Burgundy"></div>
+              <div class="swatch s-ivory"    title="Ivory"></div>
+              <div class="swatch s-camel"    title="Warm Camel"></div>
+            </div>
+            <h2 class="shop-card-name">The Presence Set</h2>
+            <p class="shop-card-desc">You don't need to say a word. This set does it for you. Elevated, structured, and built to be remembered.</p>
+            <div class="shop-card-footer">
+              <span class="shop-card-waitlist">Join the waitlist</span>
+              <a href="waitlist.html" class="shop-card-reserve">Reserve →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── THE CONVICTION SET ── -->
+        <article class="shop-product-card reveal reveal-delay-1" data-category="sets">
+          <div class="shop-card-image">
+            <img src="images/conviction-set.jpg" alt="The Conviction Set"
+              loading="lazy" onerror="this.style.display='none'" />
+            <div class="shop-card-overlay">
+              <a href="product-conviction.html" class="shop-card-btn primary-btn">View Product</a>
+              <a href="waitlist.html" class="shop-card-btn">Join Waitlist →</a>
+            </div>
+          </div>
+          <div class="shop-card-info">
+            <div class="swatches shop-card-swatches">
+              <div class="swatch s-burgundy" title="Signature Burgundy"></div>
+              <div class="swatch s-camel"    title="Warm Camel"></div>
+            </div>
+            <h2 class="shop-card-name">The Conviction Set</h2>
+            <p class="shop-card-desc">Bold structure meets quiet confidence. A two-piece for the woman who is completely certain of who she is and dresses accordingly.</p>
+            <div class="shop-card-footer">
+              <span class="shop-card-waitlist">Join the waitlist</span>
+              <a href="waitlist.html" class="shop-card-reserve">Reserve →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── THE ASCENT SET ── -->
+        <article class="shop-product-card reveal reveal-delay-2" data-category="sets dresses new">
+          <div class="shop-card-image">
+            <div class="shop-card-badge">New</div>
+            <img src="images/ascent-set.jpg" alt="The Ascent Set"
+              loading="lazy" onerror="this.style.display='none'" />
+            <div class="shop-card-overlay">
+              <a href="product-ascent.html" class="shop-card-btn primary-btn">View Product</a>
+              <a href="waitlist.html" class="shop-card-btn">Join Waitlist →</a>
+            </div>
+          </div>
+          <div class="shop-card-info">
+            <div class="swatches shop-card-swatches">
+              <div class="swatch s-burgundy" title="Signature Burgundy"></div>
+              <div class="swatch s-ivory"    title="Ivory"></div>
+            </div>
+            <h2 class="shop-card-name">The Ascent Set</h2>
+            <p class="shop-card-desc">For the woman on her way up. Structured for momentum, designed for the version of you that has already arrived.</p>
+            <div class="shop-card-footer">
+              <span class="shop-card-waitlist">Join the waitlist</span>
+              <a href="waitlist.html" class="shop-card-reserve">Reserve →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Empty state — shows when no filter matches -->
+        <div class="shop-empty" id="shop-empty">
+          <h3 class="shop-empty-title">More pieces coming soon.</h3>
+          <p class="shop-empty-sub">Join the waitlist to be notified when new pieces drop.</p>
+          <a href="waitlist.html" class="btn-primary">Join the Waitlist →</a>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ── WAITLIST STRIP ─────────────────────────────────────── -->
+  <section class="shop-waitlist-strip">
+    <div class="container">
+      <p class="section-label reveal">The launch is loading ✦</p>
+      <h2 class="shop-waitlist-title reveal reveal-delay-1">
+        Be first. Every set is pre-order only.
+      </h2>
+      <p class="shop-waitlist-sub reveal reveal-delay-2">
+        Pay now, receive on launch day. First orders placed are first fulfilled. Limited stock available.
+      </p>
+      <div class="shop-waitlist-actions reveal reveal-delay-3">
+        <a href="waitlist.html" class="btn-primary">
+          Join the Waitlist
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="contact.html" class="btn-outline">Have a question?</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ────────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">GOLDLINES</div>
+        <p class="footer-brand-desc">Elevated RTW for students and young women. Structured elegance, one line at a time.</p>
+      </div>
+      <div>
+        <p class="footer-col-title">Navigate</p>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Collection</p>
+        <ul class="footer-links">
+          <li><a href="product-authority.html">The Authority Set</a></li>
+          <li><a href="product-focus.html">The Focus Set</a></li>
+          <li><a href="product-ivy.html">The Ivy Set</a></li>
+          <li><a href="product-presence.html">The Presence Set</a></li>
+          <li><a href="product-conviction.html">The Conviction Set</a></li>
+          <li><a href="product-ascent.html">The Ascent Set</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Connect</p>
+        <ul class="footer-links">
+          <li><a href="https://www.instagram.com/goldline_rtw" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.tiktok.com/@goldline_official" target="_blank" rel="noopener">TikTok</a></li>
+          <li><a href="waitlist.html">Join Waitlist</a></li>
+          <li><a href="contact.html">Get in Touch</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 GOLDLINES. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/goldline_rtw" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.tiktok.com/@goldline_official" target="_blank" rel="noopener">TikTok</a>
+        <a href="contact.html">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="global.js"></script>
+  <script src="shop.js"></script>
+
+</body>
+</html>

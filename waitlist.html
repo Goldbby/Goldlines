@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Join the GOLDLINES waitlist — get early access and a launch day notification when we drop." />
+  <title>Join the Waitlist — GOLDLINES</title>
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/waitlist.css" />
+</head>
+<body class="waitlist-body">
+
+  <!-- ── NAV ──────────────────────────────────────────────── -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">GOLDLINES</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="waitlist.html" class="nav-cta">Pre-order</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-drawer" id="nav-drawer">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="waitlist.html" class="nav-cta">Pre-order</a>
+  </div>
+
+  <!-- ── HERO + COUNTDOWN ──────────────────────────────────── -->
+  <section class="waitlist-hero">
+    <p class="waitlist-eyebrow">GOLDLINES — Launch Loading ✦</p>
+    <h1 class="waitlist-headline">
+      Something <strong>structured</strong><br>is coming.
+    </h1>
+    <p class="waitlist-sub">
+      Elevated RTW for the woman going somewhere. Be first when we launch.
+    </p>
+
+    <!-- Countdown Timer -->
+    <div class="countdown-wrap" id="countdown" aria-label="Countdown to launch">
+      <div class="countdown-tile">
+        <span class="countdown-num" id="cd-days">00</span>
+        <span class="countdown-label">Days</span>
+      </div>
+      <span class="countdown-separator" aria-hidden="true">:</span>
+      <div class="countdown-tile">
+        <span class="countdown-num" id="cd-hours">00</span>
+        <span class="countdown-label">Hours</span>
+      </div>
+      <span class="countdown-separator" aria-hidden="true">:</span>
+      <div class="countdown-tile">
+        <span class="countdown-num" id="cd-mins">00</span>
+        <span class="countdown-label">Mins</span>
+      </div>
+      <span class="countdown-separator" aria-hidden="true">:</span>
+      <div class="countdown-tile">
+        <span class="countdown-num" id="cd-secs">00</span>
+        <span class="countdown-label">Secs</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WAITLIST FORM ─────────────────────────────────────── -->
+  <section class="waitlist-form-section">
+    <div class="waitlist-form-inner">
+
+      <!-- Form -->
+      <div id="waitlist-form-wrap">
+        <h2 class="waitlist-form-title reveal">
+          Be first. Join<br>the <em>waitlist.</em> ✦
+        </h2>
+        <p class="waitlist-form-sub reveal reveal-delay-1">
+          Get early access and a launch day notification the moment GOLDLINES drops.
+        </p>
+
+        <form class="waitlist-full-form reveal reveal-delay-2" id="waitlist-full-form" novalidate>
+
+          <div class="form-group">
+            <label class="form-label" for="wl-name">Full name *</label>
+            <input
+              class="form-input"
+              type="text"
+              id="wl-name"
+              name="name"
+              placeholder="Your full name"
+              required
+              autocomplete="name"
+            />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="wl-email">Email address *</label>
+            <input
+              class="form-input"
+              type="email"
+              id="wl-email"
+              name="email"
+              placeholder="your@email.com"
+              required
+              autocomplete="email"
+            />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="wl-whatsapp">
+              WhatsApp number
+              <span class="waitlist-optional">(optional)</span>
+            </label>
+            <input
+              class="form-input"
+              type="tel"
+              id="wl-whatsapp"
+              name="whatsapp"
+              placeholder="+234 800 000 0000"
+              autocomplete="tel"
+            />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="wl-set">Which set are you interested in? *</label>
+            <select class="form-select" id="wl-set" name="set" required>
+              <option value="" disabled selected>Choose a set</option>
+              <option value="authority">The Authority Set</option>
+              <option value="focus">The Focus Set</option>
+              <option value="ivy">The Ivy Set</option>
+              <option value="presence">The Presence Set</option>
+              <option value="conviction">The Conviction Set</option>
+              <option value="ascent">The Ascent Set</option>
+              <option value="surprise">Surprise me ✦</option>
+            </select>
+          </div>
+
+          <!-- Error message -->
+          <div id="wl-error" style="display:none; color:#e87777; font-size:12px; margin-top:-8px;"></div>
+
+          <div class="waitlist-submit-wrap">
+            <button type="submit" class="btn-primary waitlist-submit-btn" id="wl-submit-btn">
+              Join the Waitlist →
+            </button>
+            <p class="waitlist-privacy">
+              No spam. Just your launch notification and early access.<br>
+              You can unsubscribe at any time.
+            </p>
+          </div>
+
+        </form>
+      </div>
+
+      <!-- Success state -->
+      <div class="waitlist-success" id="waitlist-success">
+        <div class="waitlist-success-icon">✦</div>
+        <h2 class="waitlist-success-title">You're on the list.</h2>
+        <p class="waitlist-success-sub">
+          We'll reach out the moment GOLDLINES drops. Watch this space — and follow us for behind-the-scenes updates.
+        </p>
+        <div style="display:flex; gap:var(--space-sm); justify-content:center; flex-wrap:wrap;">
+          <a href="https://www.instagram.com/goldline_rtw" target="_blank" rel="noopener"
+            class="btn-outline">Follow on Instagram</a>
+          <a href="shop.html" class="btn-outline">Browse the collection</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── INFO STRIP ────────────────────────────────────────── -->
+  <section class="waitlist-info-strip">
+    <div class="container">
+      <div class="waitlist-info-grid">
+        <div class="waitlist-info-item reveal">
+          <div class="waitlist-info-icon">✦</div>
+          <h3 class="waitlist-info-title">Early access</h3>
+          <p class="waitlist-info-body">Waitlist members get first pick of the collection before it's open to everyone.</p>
+        </div>
+        <div class="waitlist-info-item reveal reveal-delay-1">
+          <div class="waitlist-info-icon">✦</div>
+          <h3 class="waitlist-info-title">Launch notification</h3>
+          <p class="waitlist-info-body">We'll email and WhatsApp you the moment the store goes live — no missing the drop.</p>
+        </div>
+        <div class="waitlist-info-item reveal reveal-delay-2">
+          <div class="waitlist-info-icon">✦</div>
+          <h3 class="waitlist-info-title">Limited stock</h3>
+          <p class="waitlist-info-body">First orders placed are first fulfilled. Being on the waitlist puts you at the front.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ────────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">GOLDLINES</div>
+        <p class="footer-brand-desc">Elevated RTW for students and young women. Structured elegance, one line at a time.</p>
+      </div>
+      <div>
+        <p class="footer-col-title">Navigate</p>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Collection</p>
+        <ul class="footer-links">
+          <li><a href="product-authority.html">The Authority Set</a></li>
+          <li><a href="product-focus.html">The Focus Set</a></li>
+          <li><a href="product-ivy.html">The Ivy Set</a></li>
+          <li><a href="product-presence.html">The Presence Set</a></li>
+          <li><a href="product-conviction.html">The Conviction Set</a></li>
+          <li><a href="product-ascent.html">The Ascent Set</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Connect</p>
+        <ul class="footer-links">
+          <li><a href="https://www.instagram.com/goldline_rtw" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.tiktok.com/@goldline_official" target="_blank" rel="noopener">TikTok</a></li>
+          <li><a href="waitlist.html">Join Waitlist</a></li>
+          <li><a href="contact.html">Get in Touch</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 GOLDLINES. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/goldline_rtw" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.tiktok.com/@goldline_official" target="_blank" rel="noopener">TikTok</a>
+        <a href="contact.html">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/global.js"></script>
+  <script src="js/waitlist.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,462 @@
+/* ============================================================
+   GOLDLINES — About Page Styles (about.css)
+   ============================================================ */
+
+/* ── PAGE HERO ────────────────────────────────────────────── */
+.about-hero {
+  padding-top: calc(var(--nav-h) + 100px);
+  padding-bottom: 100px;
+  background: var(--ivory);
+  overflow: hidden;
+  position: relative;
+}
+
+.about-hero::after {
+  content: 'G';
+  position: absolute;
+  right: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-serif);
+  font-size: clamp(200px, 25vw, 380px);
+  font-weight: 600;
+  color: var(--camel);
+  opacity: 0.07;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.about-hero-inner {
+  max-width: 680px;
+}
+
+.about-hero-eyebrow {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--camel);
+  margin-bottom: var(--space-md);
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.2s forwards;
+}
+
+.about-hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(40px, 6vw, 76px);
+  font-weight: 400;
+  line-height: 1.05;
+  color: var(--black);
+  margin-bottom: var(--space-md);
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.4s forwards;
+}
+
+.about-hero-title em {
+  font-style: italic;
+  color: var(--burgundy);
+}
+
+.about-hero-sub {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.85;
+  color: var(--grey-text);
+  max-width: 520px;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.6s forwards;
+}
+
+/* ── FOUNDER SPLIT ────────────────────────────────────────── */
+.founder-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 680px;
+}
+
+.founder-image {
+  position: relative;
+  overflow: hidden;
+  background: var(--black);
+}
+
+.founder-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.8s ease;
+}
+
+.founder-image:hover img { transform: scale(1.03); }
+
+.founder-image-caption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: var(--space-md) var(--space-md);
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
+  font-family: var(--font-serif);
+  font-size: 13px;
+  font-style: italic;
+  color: rgba(255,255,255,0.7);
+}
+
+.founder-content {
+  padding: var(--space-xl) var(--space-xl);
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.founder-content .section-label {
+  margin-bottom: var(--space-lg);
+}
+
+.founder-headline {
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 3vw, 44px);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--black);
+  margin-bottom: var(--space-lg);
+}
+
+.founder-headline em {
+  font-style: italic;
+  color: var(--burgundy);
+}
+
+.founder-body {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 2;
+  color: var(--grey-text);
+  margin-bottom: var(--space-md);
+}
+
+.founder-body + .founder-body {
+  margin-top: 0;
+}
+
+.founder-signature {
+  margin-top: var(--space-lg);
+  padding-top: var(--space-md);
+  border-top: 0.5px solid var(--grey-mid);
+}
+
+.founder-signature-name {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--black);
+  margin-bottom: 4px;
+}
+
+.founder-signature-title {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--camel);
+}
+
+/* ── BRAND BELIEF STRIP ───────────────────────────────────── */
+.belief-strip {
+  background: var(--black);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.belief-text {
+  font-family: var(--font-serif);
+  font-size: clamp(22px, 3.5vw, 44px);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--white);
+  line-height: 1.4;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.belief-text strong {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--camel);
+}
+
+/* ── OPENING STATEMENT ────────────────────────────────────── */
+.about-statement {
+  padding: var(--space-2xl) 0;
+  background: var(--white);
+}
+
+.about-statement-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-statement-text {
+  font-family: var(--font-serif);
+  font-size: clamp(16px, 2vw, 22px);
+  font-weight: 400;
+  line-height: 1.9;
+  color: var(--black);
+  margin-bottom: var(--space-md);
+}
+
+.about-statement-sub {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.9;
+  color: var(--grey-text);
+}
+
+/* ── PHILOSOPHY ───────────────────────────────────────────── */
+.about-philosophy {
+  padding: var(--space-2xl) 0;
+  background: var(--ivory);
+}
+
+.about-philosophy-header {
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.about-philosophy-title {
+  font-family: var(--font-serif);
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.about-philosophy-title em {
+  font-style: italic;
+  color: var(--burgundy);
+}
+
+.philosophy-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.philosophy-card {
+  background: var(--white);
+  padding: 48px 36px;
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.philosophy-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px;
+  height: 0;
+  background: var(--burgundy);
+  transition: height 0.4s ease;
+}
+
+.philosophy-card:hover::before { height: 100%; }
+.philosophy-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.philosophy-card-num {
+  font-family: var(--font-serif);
+  font-size: 56px;
+  font-weight: 300;
+  color: var(--camel);
+  opacity: 0.25;
+  line-height: 1;
+  margin-bottom: var(--space-md);
+}
+
+.philosophy-card-title {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--black);
+  margin-bottom: var(--space-sm);
+  line-height: 1.2;
+}
+
+.philosophy-card-body {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.95;
+  color: var(--grey-text);
+}
+
+/* ── STATS ROW ────────────────────────────────────────────── */
+.stats-row {
+  background: var(--burgundy);
+  padding: 80px 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  text-align: center;
+}
+
+.stat-item {
+  padding: 0 var(--space-lg);
+  position: relative;
+}
+
+.stat-item::after {
+  content: '';
+  position: absolute;
+  right: 0; top: 20%;
+  height: 60%;
+  width: 0.5px;
+  background: rgba(255,255,255,0.2);
+}
+
+.stat-item:last-child::after { display: none; }
+
+.stat-num {
+  font-family: var(--font-serif);
+  font-size: clamp(40px, 5vw, 64px);
+  font-weight: 300;
+  color: var(--white);
+  line-height: 1;
+  margin-bottom: var(--space-xs);
+}
+
+.stat-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+}
+
+/* ── CALL TO ACTION ───────────────────────────────────────── */
+.about-cta {
+  padding: var(--space-2xl) 0;
+  background: var(--white);
+  text-align: center;
+}
+
+.about-cta-title {
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 4vw, 52px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: var(--space-sm);
+}
+
+.about-cta-title em {
+  font-style: italic;
+  color: var(--burgundy);
+}
+
+.about-cta-sub {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--grey-text);
+  margin-bottom: var(--space-lg);
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.8;
+}
+
+.about-cta-actions {
+  display: flex;
+  gap: var(--space-sm);
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* ── RESPONSIVE ───────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .founder-section {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .founder-image {
+    height: 60vw;
+    min-height: 320px;
+  }
+
+  .founder-content {
+    padding: var(--space-xl) var(--pad-x);
+  }
+
+  .philosophy-cards {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-sm);
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-sm);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    padding-top: calc(var(--nav-h) + 60px);
+    padding-bottom: 60px;
+  }
+
+  .about-hero::after { display: none; }
+
+  .founder-content {
+    padding: var(--space-lg) var(--pad-x-md);
+  }
+
+  .philosophy-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .philosophy-card {
+    padding: 36px var(--space-md);
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .stat-item::after { display: none; }
+
+  .stats-row { padding: var(--space-xl) 0; }
+
+  .about-cta-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-cta-actions .btn-primary {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+
+  .belief-strip { padding: var(--space-xl) var(--pad-x-md); }
+}
+
+@media (max-width: 480px) {
+  .founder-image { height: 75vw; }
+
+  .about-statement { padding: var(--space-xl) 0; }
+
+  .about-philosophy { padding: var(--space-xl) 0; }
+
+  .about-philosophy-header { margin-bottom: 40px; }
+
+  .philosophy-card-num { font-size: 40px; }
+}
